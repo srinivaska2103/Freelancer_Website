@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Srinivas K A — Data Analyst (Freelancer)</title>
+  <meta name="description" content="Srinivas K A — Data Analyst freelancer. Portfolio, services, projects and contact form connected with EmailJS." />
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --muted: #94a3b8;
+      --accent: #3b82f6;
+      --radius: 14px;
+      --max-w: 1100px;
+      --text: #f8fafc;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, var(--bg), #1e293b);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap { max-width: var(--max-w); margin: 32px auto; padding: 28px; }
+
+    header { display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+    .brand { display: flex; gap: 14px; align-items: center; }
+    .avatar {
+      width: 72px; height: 72px; border-radius: 12px;
+      background: linear-gradient(135deg,#2563eb,#60a5fa);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; color: white; font-size: 20px;
+      box-shadow: 0 8px 20px rgba(59,130,246,0.4);
+    }
+
+    nav { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    .btn {
+      background: transparent; border: 1px solid var(--accent);
+      padding: 10px 14px; border-radius: 12px; cursor: pointer;
+      font-weight: 600; color: var(--text);
+      transition: all 0.2s ease;
+    }
+    .btn:hover { background: var(--accent); color: white; transform: translateY(-3px); }
+
+    .card {
+      background: var(--card);
+      padding: 18px; border-radius: var(--radius);
+      box-shadow: 0 8px 26px rgba(2,6,23,0.2);
+      border: 1px solid rgba(148,163,184,0.1);
+    }
+
+    footer { margin-top: 30px; text-align: center; color: var(--muted); font-size: 13px; }
+
+    @media (max-width:1000px) {
+      main { grid-template-columns: 1fr; }
+      aside .card { position: static; }
+    }
+
+    .muted { color: var(--muted); }
+    a { color: inherit; text-decoration: none; }
+
+    /* 🔹 Projects Section */
+    #projects { margin-top: 40px; }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .project {
+      background: #1e293b;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .project:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px rgba(59,130,246,0.4);
+    }
+    .project img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .project-content { padding: 14px; }
+    .project h4 { margin: 8px 0; color: var(--accent); }
+    .tag {
+      display: inline-block;
+      background: rgba(59,130,246,0.1);
+      color: #60a5fa;
+      padding: 3px 8px;
+      font-size: 12px;
+      border-radius: 8px;
+      margin-top: 4px;
+    }
+
+    /* ✅ Popup styling */
+    .popup {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      color: #fff;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: opacity 0.4s ease;
+      z-index: 9999;
+    }
+
+    /* 📄 Resume Section */
+    #resume {
+      margin-top: 40px;
+    }
+    .resume-card {
+      text-align: center;
+    }
+    .resume-frame {
+      width: 100%;
+      height: 500px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      margin-top: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar">SK</div>
+        <div>
+          <h1 id="owner-name">Srinivas K A</h1>
+          <p id="owner-role">Data Analyst • Freelancer</p>
+        </div>
+      </div>
+
+      <nav>
+        <button class="btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">Projects</button>
+        <button class="btn" onclick="document.getElementById('resume').scrollIntoView({behavior:'smooth'})">Resume</button>
+        <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</button>
+        <a class="btn" href="https://www.linkedin.com/in/srinivas-k-a-83a027372" target="_blank">LinkedIn</a>
+      </nav>
+    </header>
+
+    <!-- 🔹 About -->
+    <section class="card" style="margin-top:26px">
+      <h2>Hi — I'm Srinivas, a Data Analyst who turns raw data into insights.</h2>
+      <p class="muted">I specialize in transforming messy data into clear visual stories using Power BI, Python, and Excel dashboards.</p>
+    </section>
+
+    <!-- 🔹 Projects Section -->
+    <section id="projects">
+      <h2>📊 Featured Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project">
+          <div class="project-content">
+            <h4>HR Analytics Dashboard</h4>
+            <p class="muted">Analyzed attrition, demographics, and salary trends using Power BI with DAX measures.</p>
+            <span class="tag">Power BI</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-content">
+            <h4>Swiggy Orders & Customer Dashboard</h4>
+            <p class="muted">Designed insights for cuisines, city trends, and order behavior to support data-driven marketing.</p>
+            <span class="tag">Data Visualization</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-content">
+            <h4>Sales Forecasting Model</h4>
+            <p class="muted">Built a time-series model in Python using ARIMA and Prophet to predict revenue trends.</p>
+            <span class="tag">Python</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 📄 Resume Section -->
+    <section id="resume">
+      <div class="card resume-card">
+        <h2>📄 My Resume</h2>
+        <p class="muted">You can download my resume below.</p>
+
+        <!-- PDF Viewer -->
+        <!-- <iframe src="Srinivas_KA_Resume.pdf" class="resume-frame"></iframe> -->
+
+        <!-- Download Button -->
+        <a href="Srinivas CV  1.pdf" download class="btn" style="margin-top:12px; display:inline-block;">⬇️ Download Resume</a>
+      </div>
+    </section>
+
+    <!-- 🔹 Contact Section -->
+    <section id="contact" style="margin-top:40px">
+      <div class="card">
+        <h3>Contact / Hire me</h3>
+        <p class="muted">Fill this form and I will get back to you.</p>
+
+        <form id="site-contact" onsubmit="handleSiteContact(event)">
+          <input name="name" placeholder="Your full name" required style="width:100%;margin-bottom:8px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:white" />
+          <input name="email" type="email" placeholder="Email" required style="width:100%;margin-bottom:8px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:white" />
+          <input name="company" placeholder="Company (optional)" style="width:100%;margin-bottom:8px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:white" />
+          <textarea name="message" placeholder="Tell me about your project" rows="4" style="width:100%;margin-bottom:8px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:white"></textarea>
+
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      Built by <strong>Srinivas</strong> — Data Analyst
+    </footer>
+  </div>
+
+  <!-- EmailJS + Popup -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init({ publicKey: "8Ctle27GFU8NQlkpZ" });
+    })();
+
+    function showPopup(message, isSuccess = true) {
+      const popup = document.createElement("div");
+      popup.className = "popup";
+      popup.style.background = isSuccess ? "#22c55e" : "#ef4444";
+      popup.textContent = message;
+      document.body.appendChild(popup);
+      setTimeout(() => popup.style.opacity = "0", 2500);
+      setTimeout(() => popup.remove(), 3000);
+    }
+
+    function handleSiteContact(e) {
+      e.preventDefault();
+      const f = e.target;
+      const data = {
+        name: f.name.value,
+        email: f.email.value,
+        company: f.company.value,
+        message: f.message.value
+      };
+
+      emailjs.send("service_nq1qib9", "template_0iald6w", data)
+        .then(() => {
+          showPopup("✅ Message sent successfully!");
+          f.reset();
+        })
+        .catch((error) => {
+          console.error("EmailJS Error:", error);
+          showPopup("❌ Failed to send message. Check EmailJS setup.", false);
+        });
+    }
+  </script>
+</body>
+</html>
